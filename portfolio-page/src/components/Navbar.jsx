@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
     <div>
-    <img src={letterH} alt="letter H"style={{width: '50px', height: '50px'}} />
+    <img src={letterH} alt="letter H"style={{width: '50px'}} />
  
  {/*menu*/}
 
@@ -21,17 +21,23 @@ const Navbar = () => {
         <li>Contact</li>
       </ul>
     {/*hamburger*/}
-    <div className='md:hidden z-10'>
-    <FaBars/>
+    <div onClick={handleClick} className='md:hidden z-10'>
+    {<FaBars/>}
     </div>
 {/*mobile menu*/}
-    <ul className='hidden absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'>
+<div className={!nav 
+? 'hidden' : 
+'absolute top-0 left-0 w-full h-screen bg-[#1472ff] '}>
+  <div className='flex justify-items-start'> {<FaTimes onClick={handleClick}/>}
+  </div>
+    <ul className='flex flex-col justify-center items-center' >
         <li className='py-6 text-4xl'>Home</li>
         <li className='py-6 text-4xl'>About</li>
         <li className='py-6 text-4xl'>Skills</li>
         <li className='py-6 text-4xl'>Work</li>
         <li className='py-6 text-4xl'>Contact</li>
     </ul>
+    </div>
 
     {/*Social icons*/}
     <div className='hidden'>
