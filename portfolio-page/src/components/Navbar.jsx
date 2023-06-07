@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import letterH from '../assets/clipart-h.png'
-import {FaBars, FaTimes} from 'react-icons/fa'
+import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
+import { HiOutlineMail, } from 'react-icons/hi'
+import {BsFillPersonLinesFill} from 'react-icons/bs'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
   return (
-    <div className='fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
-    <div>
+    <div className='fixed w-full h-[90px] flex justify-between items-center px-4 bg-[#3f8bfc] text-gray-300'>
+    
     <img src={letterH} alt="letter H"style={{width: '50px'}} />
  
  {/*menu*/}
@@ -40,11 +42,24 @@ const Navbar = () => {
     </div>
 
     {/*Social icons*/}
-    <div className='hidden'>
-
+    
+<ul className='fixed flex-col top-[35%] left-0 hidden md:flex'>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]'>
+    <a className='flex justify-between items-center w-full'
+    href="https://www.linkedin.com/in/james-hoofard-ba8abb68/">
+     Linkedin<FaLinkedin size={50}  />
+    </a>
+  </li>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]'>
+    <a className='flex justify-between items-center w-full'
+    href="https://github.com/hoofmonger">
+      Github<FaGithub size={50}/> 
+    </a>
+  </li>
+</ul>
     </div>
-    </div>
-    </div>
+    
+    
   )
 }
 
