@@ -43,17 +43,29 @@ const Navbar = () => {
 
     {/*Social icons*/}
     
-<ul className='fixed flex-col top-[35%] left-0 hidden md:flex'>
-  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]'>
+<ul className='fixed flex-col top-[35%] left-0 hidden lg:flex'>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
     <a className='flex justify-between items-center w-full'
     href="https://www.linkedin.com/in/james-hoofard-ba8abb68/">
      Linkedin<FaLinkedin size={50}  />
     </a>
   </li>
-  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px]'>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-black'>
     <a className='flex justify-between items-center w-full'
     href="https://github.com/hoofmonger">
       Github<FaGithub size={50}/> 
+    </a>
+  </li>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#707525]'>
+    <a className='flex justify-between items-center w-full'
+    href="https://github.com/hoofmonger">
+      Resume<BsFillPersonLinesFill size={50}/> 
+    </a>
+  </li>
+  <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#420a73]'>
+    <a className='flex justify-between items-center w-full'
+    href="https://github.com/hoofmonger">
+      Email<HiOutlineMail size={50}/> 
     </a>
   </li>
 </ul>
